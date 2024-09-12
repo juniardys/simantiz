@@ -1,0 +1,1 @@
+forever start -l /var/www/node/simantiz/log/d_m_Y.log -a app.js

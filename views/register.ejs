@@ -1,0 +1,161 @@
+<%
+  var signUpEmailError = false;
+  var signUpSuccess = false;
+  if (locals.signUp[0]) {
+    switch(signUp[0].type) {
+      case 'email':
+        signUpEmailError = true;
+        break;
+    }
+  }
+
+%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+<title>Simantiz - Business Strategy Boardgame</title>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="plugins/materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<link href="plugins/materialize/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<link href="plugins/sweetalert/sweetalert.css" media="screen"  rel="stylesheet" type="text/css">
+<link href="stylesheets/style.css" type="text/css" rel="stylesheet" media="all"/>
+<style>
+    #top_player th {
+        background-color: #0277bd;
+    }
+    #top_player th,
+    #top_player td {
+        border-color: #01579b;
+        border-width: 2px;
+    }
+    #table-login tr td {
+      border: 0px;
+    }
+    #table-login tr td label {
+      font-size: 14px;
+    }
+    #table-login tr .label-login {
+      padding: 0 0 0 14px !important;
+      line-height: 20px;
+    }
+    #td-forgot-password,
+    #table-login tr .label-input {
+      padding: 0 0 0 14px !important;
+      line-height: 10px;
+    }
+    #table-login tr .label-input input {
+      height: 2rem;
+    }
+    #forgot-password {
+      transition: none;
+      padding: 0;
+      display: contents;
+    }
+    #forgot-password:hover {
+      text-decoration: underline;
+    }
+    #tr-forgot-password {
+      line-height: 0px;
+    }
+</style>
+
+<script src="plugins/jquery-2.1.4.min.js"></script>
+<script src="plugins/materialize/js/materialize.min.js"></script>
+<script src="plugins/materialize/js/init.js"></script>
+<script src="plugins/sweetalert/sweetalert.min.js"></script>
+
+</head>
+<body class="white">
+<!-- Start Navbar Header -->
+  <nav class="indigo darken-4" role="navigation" style="height: 100px; padding-top: 15px">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="http://localhost/gims/index.php" class="brand-logo left hide-on-small-only" style="margin-top: 10px">
+        <img src="images/logo2.png" class="l">
+      </a>
+      <ul class="right">
+        <li>
+        <form action="/login" method="post">
+          <table id="table-login">
+            <tr>
+              <td class="label-login"><label class="white-text">Email</label></td>
+              <td class="label-login"><label class="white-text">Password</label></td>
+              <td rowspan="2">
+                <button class="light-blue darken-1 waves-effect waves-light btn-flat" type="submit" name="action" style="color: white; width: 100%;">Sign In
+                </button>
+              </td>
+              <td rowspan="2">
+                <a href="/auth/google" class="red waves-effect waves-light btn-flat" style="background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 6px 6px no-repeat; margin: 0px; padding: 0 20px"></a>
+              </td>
+              <td rowspan="2">
+                <a href="/auth/facebook" class="waves-effect waves-light btn-flat" style="background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 6px 6px no-repeat; margin: 0px; padding: 0 20px; background-color: #4C69BA"></a>
+              </td>
+            </tr>
+            <tr>
+              <td class="label-input"><input type="email" name="email" id="login-email" class="validate" autofocus></td>
+              <td class="label-input"><input type="password" name="password" id="login-password" class="validate"></td>
+            </tr>
+            <tr id="tr-forgot-password">
+              <td></td>
+              <td id="td-forgot-password"><a id="forgot-password" style="color: #9cb4d8" href="/forgot_password">Forgot Password?</a></td>
+            </tr>
+          </table>
+        </li>
+      </form>
+      </ul>
+    </div>
+  </nav>
+<!-- End Navbar Header -->
+<div  class="container row">
+    <div class="input-field col s12">
+
+            <div class="row">
+          <div class="col s6 offset-s3">
+
+            <h4><b>Create new Account</b></h4>
+            <form action="/register" method="post">
+          <div class="row ">
+            <div class="input-field col s12">
+              <input id="name" type="text" name="name" <%- (signUpEmailError)? 'value="'+signUp[0].post.name+'"' : '' %> class="validate" required>
+              <label for="name">Name</label>
+            </div>
+            <div class="input-field col s12">
+              <input <%- (signUpEmailError)? 'autofocus' : '' %> id="email" type="email" name="email" <%- (signUpEmailError)? 'value="'+signUp[0].post.email+'"' : '' %> class="validate <%- (signUpEmailError)? 'invalid' : '' %>" required>
+              <label for="email">Email</label>
+              <% if(signUpEmailError){ %>
+                <span id="span-signup-email" class="helper-text" data-error="<%- signUp[0].message %>" data-success=""></span>
+              <% } %>
+            </div>
+             <div class="input-field col s12">
+              <input id="country" type="text" name="country" <%- (signUpEmailError)? 'value="'+signUp[0].post.country+'"' : '' %> class="validate">
+              <label for="country">Country</label>
+            </div>
+            <div class="input-field col s12">
+              <input id="password" type="password" name="password" class="validate" required>
+              <label for="password">Password</label>
+            </div>
+            <div class="col s12">
+                <button class="light-blue darken-1 waves-effect waves-light btn-flat" style="color: white" type="submit" name="action">Sign Up
+                    </button>
+            </div>
+          </div>
+          </form>
+      </div>
+      </div>
+    </div>
+
+</div>
+
+</body>
+<script type="text/javascript">
+  $(document).ready(function(){
+  <% if (signUpEmailError) { %>
+    $('#email').on('keydown click focusout', function(){
+      $('#span-signup-email').remove();
+    });
+  <% } %>
+  });
+</script>
+</html>

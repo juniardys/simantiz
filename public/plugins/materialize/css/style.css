@@ -1,0 +1,184 @@
+html
+    {
+        font-size: 13px !important;
+    }
+body
+    {
+        background-color: rgb(210, 221, 207);
+    }
+a
+    {
+        color: #d85300;
+    }
+
+nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i
+    {
+        height: 42px;
+        line-height: 42px;
+    }
+
+.fr1
+    {
+
+        background-color: #99af23;
+/*        background-color: #fff500;*/
+    }
+.fr2
+    {
+        background-color: #358123;
+/*        background-color: #2ce300;*/
+
+    }
+.fr3
+    {
+        background-color: #3390b2;
+/*        background-color: #8a93ff;*/
+    }
+.pd7
+    {
+        padding: 7px;
+    }
+.tgh
+    {
+        text-align: center;
+    }
+.ktk
+    {
+        width: 90px;
+        height: 90px;
+        background-color: aqua;
+        padding: 2px;
+        margin: 3px;
+        border: 3px solid #aaa;
+        font-size: 11px;
+    }
+.ktk2
+    {
+        height: 120px;
+        background-color: aqua;
+        border: 3px solid #aaa;
+    }
+
+.ktk3
+    {
+        height: 50px;
+        background-color: #ff0076;
+        margin-top: 5px;
+        border: 3px solid #aaa;
+    }
+.ktko
+    {
+        border-radius: 25px;
+    }
+
+
+.bgb
+    {
+        background-color: #414141;
+        color: #fff;
+        height: 26px;
+        padding-top: 3px !important;
+        margin-left: -10px !important;
+        margin-right: -10px !important;
+    }
+
+
+.tgh2
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+.big
+    {
+        font-size: 40px;
+        font-weight: 100;
+        color: white;
+    }
+
+.ttip
+    {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+    }
+
+
+.ttip .ttiptxt
+    {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        position: absolute;
+        z-index: 1;
+    }
+
+.ttip:hover .ttiptxt
+    {
+        visibility: visible;
+    }
+.ttip-rgt
+    {
+        top: -5px;
+        left: 105%;
+    }
+
+td,th
+    {
+        border:1px solid #626262
+    }
+td
+    {
+/*        background-color: #c3c3c3;*/
+        padding: 5px !important;
+    }
+th
+    {
+        background-color: #939393;
+    }
+.nw
+    {
+         white-space: nowrap;
+        color: white;
+    }
+.w
+    {
+        color:white;
+    }
+.bt
+    {
+        height: 120px;
+    }
+.confirm {
+    background-color: #2b7b3b !important;
+    box-shadow: #2b7b3b 0px 0px 2px, rgba(0, 0, 0, 0.0470588) 0px 0px 0px 1px inset;
+    }
+.confirm:hover {
+    background-color:#34ad4c !important;
+}
+.ktkno
+    {
+        font-size: 20px;
+        margin-left: -5px;
+        background:url(../img/whb.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: block;
+        margin-top: -3px;
+
+    }
+.bgw
+    {
+        background-color: white !important;
+    }
+
+
+.hidden{
+    display: none;
+}

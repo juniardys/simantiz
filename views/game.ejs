@@ -1,0 +1,373 @@
+<div class="row hidden" id="dv_cont_game">
+    <div class="col s12 m12 l8 offset-l1">
+        <div class="col s12 m3 tgh fr1">
+            <div class="pd7">
+               <h5 class="nw">PRE-PRODUCTION</h5>
+
+            </div>
+            <div class="bgb">
+               <b class="hide-on-med-and-up">Imperative Decisions</b>
+            </div>
+            <div class="tgh2">
+                <div class="ktk red inp " style="clear:both" id="dv_warehouse">
+                   <span class="ktkno" id="warehouse_val">0</span>
+                    Gedung Kantor & Gudang
+                </div>
+                <div class="ktk red lighten-3  inp" id="dv_handling_eqp">
+                    <span class="ktkno" id="handling_eqp_val">0</span>
+                    Handling Equipment
+                </div>
+            </div>
+
+            <div class="bgb">
+               <b class="hide-on-med-and-up">Optional Decisions</b>
+                <span class="hide-on-med-and-up right" style="margin-right: 10px">Point: <span id="dv_point_1">0</span></span>
+            </div>
+            <div class="tgh2">
+                <div class="ktk red ktko" id="dv_prd">
+                    <span class="ktkno" id="prd_val">0</span>
+                    Product R & D
+                </div>
+                <div class="ktk red lighten-3 ktko " id="dv_sip">
+                    <span class="ktkno" id="sip_val">0</span>
+                    System Improvement
+                </div>
+            </div>
+            <div class="bgb">
+               <b class="hide-on-med-and-up">Operational Decisions</b>
+            </div>
+            <div class="tgh2 ttip bt pointer" id="dv_raw_mat">
+                <b class="big"><span id="rm_total">0</span>/<span id="rm_capacity">0</span></b>
+                <p class="w">Bahan baku yang ada di gudang dan siap dikirim ke bagian produksi</p>
+            </div>
+            <div class="bgb waves waves-light manual_process" id="send_raw" style="cursor: pointer">
+                <i class="material-icons tiny">autorenew</i> Send to Production <i class="material-icons tiny">autorenew</i>
+            </div>
+            <div class="bgb waves waves-light auto_process" style="cursor: pointer">
+                <div class="hide-on-med-and-up">
+                    <i class="material-icons tiny">autorenew</i> Process All <i class="material-icons tiny">autorenew</i>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m5 tgh fr2">
+            <div class="pd7">
+               <h5 class="nw">PRODUCTION</h5>
+            </div>
+            <div class="bgb">
+               <b>Imperative Decisions</b>
+            </div>
+            <div class="tgh2">
+                <div class="ktk yellow darken-4  inp" id="dv_factory">
+                    <span class="ktkno" id="factory_val">0</span>
+                    Bangunan Pabrik
+                </div>
+                <div class="ktk yellow darken-2  inp" id="dv_machine_big">
+                    <span class="ktkno" id="machine_big_val">0</span>
+                    <span>Mesin Produksi Besar</span>
+                </div>
+                <div class="ktk yellow  inp"  id="dv_machine_small">
+                    <span class="ktkno" id="machine_small_val">0</span>
+                    Mesin Produksi Kecil
+                </div>
+                <div class="ktk yellow lighten-2  inp"  id="dv_worker">
+                    <span class="ktkno" id="worker_val">0</span>
+                    Tenaga Kerja Langsung
+                </div>
+            </div>
+            <div class="bgb">
+               <b>Optional Decisions</b>
+                <span class="hide-on-med-and-up right" style="margin-right: 10px">Point: <span id="dv_point_2">0</span></span>
+            </div>
+            <div class="tgh2">
+                <div class="ktk yellow darken-4 ktko " id="dv_qap">
+                    <span class="ktkno" id="qap_val">0</span>
+                    Quality Assurance
+                </div>
+                <div class="ktk yellow darken-2 ktko " id="dv_edp">
+                    <span class="ktkno" id="edp_val">0</span>
+                    Employee Development
+                </div>
+            </div>
+            <div class="bgb">
+               <b>Operational Decisions</b>
+            </div>
+            <div class="tgh2 ttip bt pointer" id="dv_prod">
+                <b class="big"><span id="prod_total">0</span>/<span id="prod_capacity">0</span></b>
+                <p class="w">Barang dalam proses yang masih ada di bagian pengolahan</p>
+            </div>
+            <div class="bgb waves waves-light manual_process" id="process_production" style="cursor: pointer">
+                <i class="material-icons tiny">autorenew</i> Process Production <i class="material-icons tiny">autorenew</i>
+            </div>
+            <div class="bgb waves waves-light auto_process" style="cursor: pointer">
+                <i class="material-icons tiny">autorenew</i> Process All <i class="material-icons tiny">autorenew</i>
+            </div>
+        </div>
+        <div class="col s12 m4 tgh fr3">
+        <div class="pd7">
+           <h5 class="nw">POST-PRODUCTION</h5>
+        </div>
+        <div class="bgb">
+           <b class="hide-on-med-and-up">Imperative Decisions</b>
+        </div>
+        <div class="tgh2">
+            <div class="ktk green lighten-3  inp" id="dv_agent">
+                <span class="ktkno" id="agent_val">0</span>
+                Agent Penjualan
+            </div>
+            <div class="ktk green  inp" id="dv_salesman">
+                <span class="ktkno" id="salesman_val">0</span>
+                Salesman
+            </div>
+        </div>
+        <div class="bgb">
+           <b class="hide-on-med-and-up">Optional Decisions</b>
+           <span class="right" style="margin-right: 10px">Point: <span id="dv_point_3">0</span></span>
+        </div>
+        <div class="tgh2">
+            <div class="ktk green lighten-3 ktko " id="dv_mrp">
+                <span class="ktkno" id="mrp_val">0</span>
+                Market Research
+            </div>
+            <div class="ktk green ktko " id="dv_pp">
+                <span class="ktkno" id="pp_val">0</span>
+                Promotion Program
+            </div>
+            <div class="ktk green darken-1 ktko " id="dv_ssp">
+                <span class="ktkno" id="ssp_val">0</span>
+                Sales Service
+            </div>
+        </div>
+        <div class="bgb">
+           <b class="hide-on-med-and-up">Operational Decisions</b>
+        </div>
+        <div class="tgh2 ttip bt pointer" id="dv_clo">
+            <b class="big"><span id="clo_total">0</span>/<span id="clo_capacity">0</span></b>
+            <p class="w">CLORORO yang ada di agen-agen dan siap untuk dijual</p>
+        </div>
+        <div class="bgb">
+            <div class="switch">
+                <label>
+                    Manual
+                    <input type="checkbox" id="lever_process" value="1">
+                    <span class="lever"></span>
+                    Automatic
+                </label>
+            </div>
+        </div>
+    </div>
+<p>&nbsp;</p>
+        <div class="row s12">
+
+            <div class="">
+              <ul class="tabs">
+                <li class="tab col s3"><a class="active" href="#ph">PARTICIPANTS HIGHLIGHT</a></li>
+                <li class="tab col s3"><a href="#ps">PERFORMANCE STATISTICS</a></li>
+
+              </ul>
+            </div>
+            <div id="ph" >
+                <table class="bdt striped highlight responsive-table">
+                        <thead>
+                          <tr id="part_user">
+                              <th data-field="id"></th>
+
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <tr id="part_revenue">
+                            <td>Total Revenue</td>
+
+                          </tr>
+                          <tr id="part_sales_unit">
+                            <td>Total Sales Unit</td>
+
+                          </tr>
+                          <tr id="part_avg_sales_price">
+                            <td>Average Sales Price</td>
+
+                          </tr>
+                          <tr id="part_warehouse">
+                            <td>Warehouse Capacity</td>
+
+                          </tr>
+                          <tr id="part_handling">
+                            <td>Handling Capacity</td>
+
+                          </tr>
+                          <tr id="part_machine">
+                            <td>Machine Capacity</td>
+
+                          </tr>
+                          <tr id="part_manpower">
+                            <td>Man Power Capacity</td>
+
+                          </tr>
+                          <tr id="part_production">
+                            <td>Production Capacity</td>
+
+                          </tr>
+                          <tr id="part_agent">
+                            <td>Agent Capacity</td>
+                          </tr>
+                          <tr id="part_salesman">
+                            <td>Sales Force Capacity</td>
+                          </tr>
+
+                          <tr id="part_rawmaterial">
+                            <td>Total Stock of Raw Material</td>
+
+                          </tr>
+                          <tr id="part_product">
+                            <td>Total Work on Process</td>
+
+                          </tr>
+                          <tr id="part_clororo">
+                            <td>Total Clororo ready to be sold</td>
+
+                          </tr>
+                          <tr id="part_prd">
+                            <td>Product Research and Development</td>
+
+                          </tr>
+                          <tr id="part_sip">
+                            <td>System Improvement Program</td>
+
+                          </tr>
+                          <tr id="part_qap">
+                            <td>Quality Assurance Program</td>
+
+                          </tr>
+                          <tr id="part_edp">
+                            <td>Employee Development Program</td>
+
+                          </tr>
+                          <tr id="part_mrp">
+                            <td>Market Research Program</td>
+
+                          </tr>
+                          <tr id="part_pp">
+                            <td>Promotion Program</td>
+
+                          </tr>
+                          <tr id="part_ssp">
+                            <td>Sales Service Program</td>
+
+                          </tr>
+
+                        </tbody>
+                      </table>
+
+            </div>
+            <div id="ps" >
+                <table class="highlight striped">
+                        <tbody>
+                          <tr>
+                            <td>Cash Balance <span class="right">R$ <span id="ps_balance">0</span></span></td>
+                            <td>Revenue <span class="right">R$ <span id="ps_revenue">0</span></span></td>
+
+                          </tr>
+                          <tr>
+                            <td>Estimated Profit (Loss) <span class="right">R$ <span id="ps_est_profit">0</span></span></td>
+                            <td>Market Share <span class="right"><span id="ps_market_share">0</span>%</span></td>
+
+                          </tr>
+                          <tr>
+                            <td>CDM Ratio <span class="right"><span id="ps_cdm_ratio">0</span>x</span></td>
+                            <td>Profit on Sales Ratio <span class="right"><span id="ps_profit_sales">0</span>%</span></td>
+
+                          </tr>
+                          <tr>
+                            <td>Return on Equity ratio <span class="right"><span id="ps_return_equity">0</span>%</span></td>
+                            <td>Total as BID Initiator <span class="right" id="ps_bid_initiator">0</span></td>
+
+                          </tr>
+                          <tr>
+                            <td>Total as BID Participator <span class="right" id="ps_bid_participator">0</span></td>
+                            <td>Total Unit Sold <span class="right" id="ps_total_unit_sold">0</span></td>
+
+                          </tr>
+                          <tr>
+                            <td>Average Sales Price <span class="right">R$ <span id="ps_avg_sales_price">0</span></span></td>
+                            <td>Last Sales Price <span class="right">R$ <span id="ps_last_sales_price">0</span></span></td>
+
+                          </tr>
+
+
+                        </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <div class="col s12 m12 l3">
+        <div class="row col s12">
+            <div class="col s6 m6 l6 ktk2 tgh" id="exec_time_box"><h6 id="exec_time_label">Deadline to execute</h6><b class="big" id="exec_time" style="color: black">-</b></div>
+            <div class="ktk2 col s6 m6 l6 tgh" id="bid_time_box"><h6>Deadline to BID</h6><b class="big" id="bid_time" style="color: black">-</b></div>
+        </div>
+        <div class="col s12">
+          <h5 class="center">Game Time Remaining: <br><span id="dv_game_time_left">-</span></h5>
+        </div>
+        <div class="col s12">
+            <div class="ktk3 tgh2" id="bid_light"><h5>BIDDING Session</h5></div>
+        </div>
+        <div class="col s12">
+            <label style="font-size: 14px; color:dimgrey">Price</label>
+            <label class="right" style="font-size: 14px; color:dimgrey">Cost: <b>R$</b> <span id="bid_cost" style="font-weight: bold"></span></label>
+            <select style="display: inherit" id="select-bidding-price">
+            </select>
+        </div>
+        <div class="col s12">
+            <div class="ktk3 tgh2" style="cursor: pointer" id="dv_bid"><h5>BID</h5></div>
+        </div>
+        <div class="col s12">
+                   <h5>BIDDING PARTICIPANT</h5>
+                   <b>BID INITIATOR</b>
+                    <table class="striped highlight" id="bid_initiator">
+                        <thead>
+                            <tr>
+                                <th data-field="id">Name</th>
+                                <th data-field="name">Qty</th>
+                                <th class="bid_hidden" data-field="price">Price</th>
+                                <th class="bid_hidden" data-field="point">Point</th>
+                            </tr>
+                        </thead>
+                    
+                        <tbody>
+                    
+                        </tbody>
+                    </table>
+                    <br>
+                    <b>BID PARTICIPATOR</b>
+                    <table class="striped highlight" id="bid_participator">
+                        <thead>
+                            <tr>
+                                <th data-field="id">Name</th>
+                                <th data-field="name">Qty</th>
+                                <th class="bid_hidden" data-field="price">Price</th>
+                                <th class="bid_hidden" data-field="point">Point</th>
+                            </tr>
+                        </thead>
+                    
+                        <tbody>
+                    
+                        </tbody>
+                    </table>
+                    <br>
+                      <b>LIST PLAYER</b> <b class="right">ROUND: <span id="dv_round">-</span></b>
+                    <table class="striped highlight" id="list_player">
+                        <thead>
+                          <tr>
+                              <th data-field="id">Name</th>
+                              <th data-field="money">Money</th>
+                              <th data-field="point">Point</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                        </tbody>
+                      </table>
+            </div>
+
+    </div>
+</div>
