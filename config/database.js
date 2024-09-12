@@ -3,6 +3,7 @@ var mysql      = require('mysql');
 // configure database
 var db_config = {
 	host     : String(process.env.DB_HOST),
+	port		 : String(process.env.DB_PORT || '3306'),
 	user     : String(process.env.DB_USER),
 	password : String(process.env.DB_PASSWORD),
 	database : String(process.env.DB_DATABASE)
